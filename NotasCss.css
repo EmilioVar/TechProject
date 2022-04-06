@@ -1,0 +1,66 @@
+/**
+Propiedades de transform:
+    *MEZCLA -> se pueden poner varios atributos seguidos, por ejemplo: transition: rotate(150deg) scale(2);
+    - transition
+        *transiiton-timing-function: ease-in-out (se puede elegir uno de los 3 o los 3) / linear / step (va por pasos, hay que poner en paréntesis la cantidad de pasos)
+        *transition-delay (retarda la accioón, se pone el tiempo en segundos)
+        *ATAJO -> transition: 1s linear 2s; (en este tenemos todos los atributos).
+    - rotate
+    - scale
+    - skew
+ANIMACIONES:
+    *Características
+        - animation-name -> nombre de la animación. (ejemplo: animation-arrow !important
+        - animation-duration -> duración de la animación. (ejemplo: 1s) !important
+        - animation-timing-function -> tipo de ejecución. de la animación
+        - animation-delay -> retardo en realizarse la aplicación. (ejemplo: 1s)
+        - animation-interation-count -> timepo que se repite la animación. ejemplo (1,2,infinite...)
+        - animation-fill-mode -> none / forwards / *backwards* (lo ejecuta cuando termina el relay, hasta entonces lo oculta) / both
+        - animation-direction -> dirección de la animación.
+    *ATAJO -> animation: (name,duraiton,timing-function-delay-interation-count,direction,fill-mode) ejemplo: animation: 4s ease-in-out 1s 2;
+
+    ¡ANIMAR LA APLICACIÓN!
+
+    @keyframes animation-arrow{
+        0%{
+            opacity: 0;
+            transform: translateY(0);
+        }
+        50%{
+            opacity: 1;
+            transform: translateY(150px);
+        }
+        100%{
+            opacity: 0;
+            transform: translateY(0)
+        }
+    }
+
+
+**/
+
+/********************************* EJEMPLOS ***********************************/
+body{
+    margin: 0;
+    padding: 0;
+}
+div{
+    animation: cubo 1s linear 1 1s;
+/*     animation-name: cubo;
+    animation-duration: 10s; */
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    color:white;
+}
+@keyframes cubo{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
