@@ -271,13 +271,14 @@ footer > p{
 @media (max-width: 700px){
     .header{
         height: 130px;
+        flex-direction: column;
+    }
+    .icono{
+        margin-left: 40%;
+        margin-bottom: 30px;
     }
     main{
         margin-top: 130px;
-    }
-    nav{
-        justify-content: space-between;
-        flex-direction: column;
     }
     .info{
         flex-wrap: nowrap;
@@ -288,7 +289,7 @@ footer > p{
         font-size: 20px;
     }
     .pic-team{
-        width: 375px
+        width: 375px;
     }
 }
 
